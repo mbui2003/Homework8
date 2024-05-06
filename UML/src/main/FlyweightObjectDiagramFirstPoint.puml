@@ -1,0 +1,147 @@
+@startuml
+left to right direction
+
+object "<u>testDocument: Document</u>" as testDocument {
+    characters: ArrayList<Character>
+    propertiesFactory: CharacterPropertiesFactory
+}
+
+object "<u>flyweightCharacterProperties: CharacterProperties</u>" as arialBlack16 {
+    font: "Arial"
+    color: "Black"
+    size: 16
+}
+
+object "<u>flyweightCharacterProperties: CharacterProperties</u>" as arialBlack14 {
+    font: "Arial"
+    color: "Black"
+    size: 14
+}
+
+object "<u>flyweightCharacterProperties: CharacterProperties</u>" as verdanaBlue18 {
+    font: "Verdana"
+    color: "Blue"
+    size: 18
+}
+
+object "<u>flyweightCharacterProperties: CharacterProperties</u>" as verdanaRed12 {
+    font: "Verdana"
+    color: "Red"
+    size: 12
+}
+
+object "<u>character: Character</u>" as hCharacter {
+    character: "H"
+    characterProperty: flyweightCharacterProperties
+}
+
+object "<u>character: Character</u>" as eCharacter {
+    character: "e"
+    characterProperty: flyweightCharacterProperties
+}
+
+object "<u>character: Character</u>" as lCharacter {
+    character: "l"
+    characterProperty: flyweightCharacterProperties
+}
+
+object "<u>character: Character</u>" as lCharacter2 {
+    character: "l"
+    characterProperty: flyweightCharacterProperties
+}
+
+object "<u>character: Character</u>" as oCharacter {
+    character: "o"
+    characterProperty: flyweightCharacterProperties
+}
+
+object "<u>character: Character</u>" as wCharacter {
+    character: "W"
+    characterProperty: flyweightCharacterProperties
+}
+
+object "<u>character: Character</u>" as oCharacter2 {
+    character: "o"
+    characterProperty: flyweightCharacterProperties
+}
+
+object "<u>character: Character</u>" as rCharacter {
+    character: "r"
+    characterProperty: flyweightCharacterProperties
+}
+
+object "<u>character: Character</u>" as lCharacter3 {
+    character: "l"
+    characterProperty: flyweightCharacterProperties
+}
+
+object "<u>character: Character</u>" as dCharacter {
+    character: "d"
+    characterProperty: flyweightCharacterProperties
+}
+
+object "<u>character: Character</u>" as cCharacter {
+    character: "C"
+    characterProperty: flyweightCharacterProperties
+}
+
+object "<u>character: Character</u>" as sCharacter {
+    character: "S"
+    characterProperty: flyweightCharacterProperties
+}
+
+object "<u>character: Character</u>" as 5Character {
+    character: "5"
+    characterProperty: flyweightCharacterProperties
+}
+
+object "<u>character: Character</u>" as 8Character {
+    character: "8"
+    characterProperty: flyweightCharacterProperties
+}
+
+object "<u>character: Character</u>" as 0Character {
+    character: "0"
+    characterProperty: flyweightCharacterProperties
+}
+
+object "<u>character: Character</u>" as 0Character2 {
+    character: "0"
+    characterProperty: flyweightCharacterProperties
+}
+
+
+testDocument *-- hCharacter
+hCharacter o-- arialBlack16
+testDocument *-- eCharacter
+eCharacter o-- arialBlack14
+testDocument *-- lCharacter
+lCharacter o-- arialBlack14
+testDocument *-- lCharacter2
+lCharacter2 o-- arialBlack14
+testDocument *-- oCharacter
+oCharacter o-- arialBlack14
+testDocument *-- wCharacter
+wCharacter o-- arialBlack16
+testDocument *-- oCharacter2
+oCharacter2 o-- arialBlack14
+testDocument *-- rCharacter
+rCharacter o-- arialBlack14
+testDocument *-- lCharacter3
+lCharacter3 o-- arialBlack14
+testDocument *-- dCharacter
+dCharacter o-- arialBlack14
+testDocument *-- cCharacter
+cCharacter o-- verdanaBlue18
+testDocument *-- sCharacter
+sCharacter o-- verdanaBlue18
+testDocument *-- 5Character
+5Character o-- verdanaRed12
+testDocument *-- 8Character
+8Character o-- verdanaRed12
+testDocument *-- 0Character
+0Character o-- verdanaRed12
+testDocument *-- 0Character2
+0Character2 o-- verdanaRed12
+
+@enduml
